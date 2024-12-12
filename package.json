@@ -1,0 +1,14 @@
+{
+  "name": "cypress-exs",
+  "version": "1.0.0",
+  "description": "cypress testing automation training",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --spec 'cypress/e2e/**/*.{js,jsx,ts,tsx}'"
+  },
+  "author": "Alexander Libaur",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.16.1"
+  }
+}
