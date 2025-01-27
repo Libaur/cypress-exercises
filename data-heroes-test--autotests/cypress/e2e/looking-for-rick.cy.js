@@ -1,34 +1,56 @@
-describe("searching for a character (Rick) and validating that the search results contain the expected number of cards", () => {
-  let rick, mainPage, searchByName, applyButton;
+describe('searching for a character (Rick) and validating that the search results contain the expected number of cards', () => {
+  const links = {
+    mainPage: '',
+  }
+  const inputData = {
+    rick: '',
+    morty: '',
+  }
+  const selectors = {
+    input: '',
+    inputOption: '',
+    searchInput: '',
+    button: '',
+    card: '',
+  }
+  const elementsText = {
+    searchByName: '',
+    applyButton: '',
+  }
+  const minimalWaitForCardsToLoad = 500
+  const expectedCardsOnPageQuantity = 21
 
   before(() => {
-    const links = cy.fixture("links");
-    const dataText = cy.fixture("data-text");
-    const elementsText = cy.fixture("elements-text");
+    cy.fixture('links').then(data => {
+      links.mainPage = data.mainPage
+    })
+    cy.fixture('data-text').then(data => {
+      inputData.rick = data.rick
+    })
+    cy.fixture('elements-text').then(data => {
+      elementsText.searchByName = data.searchByName
+      elementsText.applyButton = data.applyButton
+      selectors.input = data.input
+      selectors.inputOption = data.inputOption
+      selectors.searchInput = data.searchInput
+      selectors.button = data.button
+      selectors.card = data.card
+    })
+  })
 
-    Promise.all([links, dataText, elementsText]).then(
-      ([links, dataText, elementsText]) => {
-        rick = dataText.rick;
-        mainPage = links.mainPage;
-        searchByName = elementsText.searchByName;
-        applyButton = elementsText.applyButton;
-      },
-    );
-  });
+  it('looking for Rick', () => {
+    cy.visit(links.mainPage)
+    cy.get(selectors.input).last().click() // пара элементов, соответствующих селектору: last() для избежания { multiple: true }
+    cy.get(selectors.inputOption).contains(elementsText.searchByName).click()
+    cy.get(selectors.searchInput).type(inputData.rick)
+    cy.get(selectors.button).contains(elementsText.applyButton).click()
 
-  it("looking for Rick", () => {
-    cy.visit(mainPage);
-    cy.get(".v-field__input").last().click(); // пара элементов, соответствующих селектору: last() для избежания { multiple: true }
-    cy.get(".v-list-item-title").contains(searchByName).click();
-    cy.get("#input-0").type(rick);
-    cy.get(".v-btn").contains(applyButton).click();
+    cy.wait(minimalWaitForCardsToLoad)
 
-    cy.wait(500); // загрузка карточек
-
-    cy.get(".v-card")
-      .should("have.length", 21)
-      .each(($card) => {
-        expect($card).to.contain(rick);
-      });
-  });
-});
+    cy.get(selectors.card)
+      .should('have.length', expectedCardsOnPageQuantity)
+      .each($card => {
+        expect($card).to.contain(inputData.rick)
+      })
+  })
+})

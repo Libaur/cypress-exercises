@@ -1,41 +1,61 @@
-describe("CRUD a task", () => {
-	let deleteButton, taskTitle, taskDescription;
+describe('CRUD a task', () => {
+	const inputData = {
+		taskTitle: '',
+		taskDescription: '',
+	}
+	const selectors = {
+		deleteButton: '',
+		titleInput: '',
+		descriptionInput: '',
+		addButton: '',
+		taskItem: '',
+		itemTitle: '',
+		itemDescription: '',
+		startEditButton: '',
+		endEditButton: '',
+	}
 
 	before(() => {
-		const dataText = cy.fixture("data-text");
-		const elementsText = cy.fixture("elements-text");
+		cy.fixture('data-text').then(data => {
+			inputData.taskTitle = data.taskTitle
+			inputData.taskDescription = data.taskDescription
+		})
+		cy.fixture('elements-text').then(data => {
+			selectors.deleteButton = data.deleteButton
+			selectors.titleInput = data.titleInput
+			selectors.descriptionInput = data.descriptionInput
+			selectors.addButton = data.addButton
+			selectors.taskItem = data.taskItem
+			selectors.itemTitle = data.itemTitle
+			selectors.itemDescription = data.itemDescription
+			selectors.startEditButton = data.startEditButton
+			selectors.endEditButton = data.endEditButton
+		})
+	})
 
-		Promise.all([dataText, elementsText]).then(
-			([dataText, elementsText]) => {
-				deleteButton = elementsText.deleteButton;
-				taskTitle = dataText.taskTitle;
-				taskDescription = dataText.taskDescription;
-			},
-		);
-	});
+	it('create, update and delete a task', () => {
+		cy.visit('/')
 
-	it("create, update and delete a task", () => {
-		cy.visit("/");
+		cy.get(selectors.titleInput).type(inputData.taskTitle)
+		cy.get(selectors.descriptionInput).type(inputData.taskDescription)
+		cy.get(selectors.addButton).click()
+		cy.get(selectors.taskItem).should('have.length', 1)
+		cy.get(selectors.itemTitle).should('contain.text', inputData.taskTitle)
+		cy.get(selectors.itemDescription).should(
+			'contain.text',
+			inputData.taskDescription,
+		)
 
-		cy.get("#input-2").type(taskTitle);
-		cy.get("#input-4").type(taskDescription);
-		cy.get(".add-btn").click();
-		cy.get(".v-list-item-title").should("contain.text", taskTitle);
-		cy.get(".v-list-item-subtitle").should(
-			"contain.text",
-			taskDescription,
-		);
+		cy.get(selectors.taskItem)
+			.trigger('mouseover')
+			.get(selectors.startEditButton)
+			.should('be.visible')
+		cy.get(selectors.startEditButton).click()
+		cy.get(selectors.taskItem).should('not.exist')
+		cy.get(selectors.endEditButton).click()
+		cy.get(selectors.taskItem).should('exist')
 
-		cy.get(".v-list-item")
-			.trigger("mouseover")
-			.get(".edit-btn")
-			.should("be.visible");
-		cy.get(".edit-btn").click();
-		cy.get(".v-list-item").should("not.exist");
-		cy.get(".mdi-clipboard-edit-outline").click();
-		cy.get(".v-list-item").should("exist");
-
-		cy.contains(deleteButton).click();
-		cy.get(".v-list-item").should("not.exist");
-	});
-});
+		cy.contains(selectors.deleteButton).click()
+		cy.get(selectors.taskItem).should('not.exist')
+	})
+})
