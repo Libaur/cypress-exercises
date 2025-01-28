@@ -4,19 +4,8 @@ describe('searching for a character (Rick) and validating that the search result
   }
   const inputData = {
     rick: '',
-    morty: '',
   }
-  const selectors = {
-    input: '',
-    inputOption: '',
-    searchInput: '',
-    button: '',
-    card: '',
-  }
-  const elementsText = {
-    searchByName: '',
-    applyButton: '',
-  }
+  const elementsData = {}
   const minimalWaitForCardsToLoad = 500
   const expectedCardsOnPageQuantity = 21
 
@@ -24,30 +13,24 @@ describe('searching for a character (Rick) and validating that the search result
     cy.fixture('links').then(data => {
       links.mainPage = data.mainPage
     })
-    cy.fixture('data-text').then(data => {
+    cy.fixture('input-data').then(data => {
       inputData.rick = data.rick
     })
-    cy.fixture('elements-text').then(data => {
-      elementsText.searchByName = data.searchByName
-      elementsText.applyButton = data.applyButton
-      selectors.input = data.input
-      selectors.inputOption = data.inputOption
-      selectors.searchInput = data.searchInput
-      selectors.button = data.button
-      selectors.card = data.card
+    cy.fixture('elements-data').then(data => {
+      Object.assign(elementsData, data)
     })
   })
 
   it('looking for Rick', () => {
     cy.visit(links.mainPage)
-    cy.get(selectors.input).last().click() // пара элементов, соответствующих селектору: last() для избежания { multiple: true }
-    cy.get(selectors.inputOption).contains(elementsText.searchByName).click()
-    cy.get(selectors.searchInput).type(inputData.rick)
-    cy.get(selectors.button).contains(elementsText.applyButton).click()
+    cy.get(elementsData.input).last().click() // пара элементов, соответствующих селектору: last() для избежания { multiple: true }
+    cy.get(elementsData.inputOption).contains(elementsData.searchByName).click()
+    cy.get(elementsData.searchInput).type(inputData.rick)
+    cy.get(elementsData.button).contains(elementsData.applyButton).click()
 
     cy.wait(minimalWaitForCardsToLoad)
 
-    cy.get(selectors.card)
+    cy.get(elementsData.card)
       .should('have.length', expectedCardsOnPageQuantity)
       .each($card => {
         expect($card).to.contain(inputData.rick)

@@ -1,61 +1,43 @@
+import { createTask } from '../support/helpers.js'
+
 describe('CRUD a task', () => {
-	const inputData = {
-		taskTitle: '',
-		taskDescription: '',
-	}
-	const selectors = {
-		deleteButton: '',
-		titleInput: '',
-		descriptionInput: '',
-		addButton: '',
-		taskItem: '',
-		itemTitle: '',
-		itemDescription: '',
-		startEditButton: '',
-		endEditButton: '',
-	}
+	const inputData = {}
+	const elementsData = {}
 
 	before(() => {
-		cy.fixture('data-text').then(data => {
-			inputData.taskTitle = data.taskTitle
-			inputData.taskDescription = data.taskDescription
+		cy.fixture('input-data').then(data => {
+			Object.assign(inputData, data)
 		})
-		cy.fixture('elements-text').then(data => {
-			selectors.deleteButton = data.deleteButton
-			selectors.titleInput = data.titleInput
-			selectors.descriptionInput = data.descriptionInput
-			selectors.addButton = data.addButton
-			selectors.taskItem = data.taskItem
-			selectors.itemTitle = data.itemTitle
-			selectors.itemDescription = data.itemDescription
-			selectors.startEditButton = data.startEditButton
-			selectors.endEditButton = data.endEditButton
+		cy.fixture('elements-data').then(data => {
+			Object.assign(elementsData, data)
 		})
 	})
 
 	it('create, update and delete a task', () => {
 		cy.visit('/')
 
-		cy.get(selectors.titleInput).type(inputData.taskTitle)
-		cy.get(selectors.descriptionInput).type(inputData.taskDescription)
-		cy.get(selectors.addButton).click()
-		cy.get(selectors.taskItem).should('have.length', 1)
-		cy.get(selectors.itemTitle).should('contain.text', inputData.taskTitle)
-		cy.get(selectors.itemDescription).should(
+		createTask(inputData.taskTitle, inputData.taskDescription, elementsData)
+
+		cy.get(elementsData.taskItem).should('have.length', 1)
+		cy.get(elementsData.itemTitle).should(
+			'contain.text',
+			inputData.taskTitle,
+		)
+		cy.get(elementsData.itemDescription).should(
 			'contain.text',
 			inputData.taskDescription,
 		)
 
-		cy.get(selectors.taskItem)
+		cy.get(elementsData.taskItem)
 			.trigger('mouseover')
-			.get(selectors.startEditButton)
+			.get(elementsData.startEditButton)
 			.should('be.visible')
-		cy.get(selectors.startEditButton).click()
-		cy.get(selectors.taskItem).should('not.exist')
-		cy.get(selectors.endEditButton).click()
-		cy.get(selectors.taskItem).should('exist')
+		cy.get(elementsData.startEditButton).click()
+		cy.get(elementsData.taskItem).should('not.exist')
+		cy.get(elementsData.endEditButton).click()
+		cy.get(elementsData.taskItem).should('exist')
 
-		cy.contains(selectors.deleteButton).click()
-		cy.get(selectors.taskItem).should('not.exist')
+		cy.contains(elementsData.deleteButton).click()
+		cy.get(elementsData.taskItem).should('not.exist')
 	})
 })
