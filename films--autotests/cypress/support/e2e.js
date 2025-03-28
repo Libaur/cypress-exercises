@@ -1,3 +1,9 @@
+import { login } from "./login";
+import { apiRequest } from "./api-request";
+
+Cypress.Commands.add('login', login)
+Cypress.Commands.add('apiRequest', apiRequest)
+
 const inputData = {}
 
 beforeEach(() => {

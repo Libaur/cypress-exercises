@@ -6,5 +6,8 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl: "https://finally-films.netlify.app/",
+    env: {
+      apiBaseUrl: "https://api.themoviedb.org"
+    }
   },
 });
