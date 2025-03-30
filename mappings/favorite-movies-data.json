@@ -1,0 +1,123 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/3/account/21034190/favorite/movies"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "page": 1,
+      "results": [
+        {
+          "adult": false,
+          "backdrop_path": "/atn3cbaqNJl7mw7p9QDiMIfHAK2.jpg",
+          "genre_ids": [
+            28,
+            12,
+            878,
+            14,
+            18
+          ],
+          "id": 624091,
+          "original_language": "id",
+          "original_title": "Sri Asih",
+          "overview": "Alana discover the truth about her origin: she’s not an ordinary human being. She may be the gift for humanity and become its protector as Sri Asih. Or a destruction, if she can’t control her anger.",
+          "popularity": 6.2161,
+          "poster_path": "/wShcJSKMFg1Dy1yq7kEZuay6pLS.jpg",
+          "release_date": "2022-11-17",
+          "title": "Sri Asih",
+          "video": false,
+          "vote_average": 6.5,
+          "vote_count": 140
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/gklkxY0veMajdCiGe6ggsh07VG2.jpg",
+          "genre_ids": [
+            16,
+            12,
+            35,
+            10751
+          ],
+          "id": 940551,
+          "original_language": "en",
+          "original_title": "Migration",
+          "overview": "After a migrating duck family alights on their pond with thrilling tales of far-flung places, the Mallard family embarks on a family road trip, from New England, to New York City, to tropical Jamaica.",
+          "popularity": 18.6287,
+          "poster_path": "/apQL85BMRgkBWQq6pBXKOLfCyaV.jpg",
+          "release_date": "2023-12-06",
+          "title": "Migration",
+          "video": false,
+          "vote_average": 7.4,
+          "vote_count": 1961
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/oHBhHoNe59VH6bUMazDtJmWOFSS.jpg",
+          "genre_ids": [
+            878,
+            27,
+            28
+          ],
+          "id": 940721,
+          "original_language": "ja",
+          "original_title": "ゴジラ-1.0",
+          "overview": "In postwar Japan, Godzilla brings new devastation to an already scorched landscape. With no military intervention or government help in sight, the survivors must join together in the face of despair and fight back against an unrelenting horror.",
+          "popularity": 14.7907,
+          "poster_path": "/hkxxMIGaiCTmrEArK7J56JTKUlB.jpg",
+          "release_date": "2023-11-03",
+          "title": "Godzilla Minus One",
+          "video": false,
+          "vote_average": 7.576,
+          "vote_count": 2572
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/TGsfNWkASegCfAn6ED1b08a9O6.jpg",
+          "genre_ids": [
+            27,
+            9648
+          ],
+          "id": 1125311,
+          "original_language": "en",
+          "original_title": "Imaginary",
+          "overview": "When Jessica moves back into her childhood home with her family, her youngest stepdaughter Alice develops an eerie attachment to a stuffed bear named Chauncey she finds in the basement. Alice starts playing games with Chauncey that begin playful and become increasingly sinister. As Alice’s behavior becomes more and more concerning, Jessica intervenes only to realize Chauncey is much more than the stuffed toy bear she believed him to be.",
+          "popularity": 4.7843,
+          "poster_path": "/bPCxkrCEGJmaYfvdXj0x3mCLbGr.jpg",
+          "release_date": "2024-03-06",
+          "title": "Imaginary",
+          "video": false,
+          "vote_average": 6.0,
+          "vote_count": 550
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/h9YlRHAZWOWtGonllmj6JJg1FrE.jpg",
+          "genre_ids": [
+            16,
+            10751,
+            28,
+            12,
+            14
+          ],
+          "id": 588648,
+          "original_language": "zh",
+          "original_title": "Dragonkeeper",
+          "overview": "Set in Han Imperial China, the plot follows the adventures of enslaved girl Ping with ancient dragon Long Danzi. Dragons had been banished from the kingdom. Ping, an orphan, finds one of the last remaining dragon eggs. Palace guards force Ping to run away in order to return the dragon egg to the ocean and save all dragons from extinction. Ping discovers that she is a true Dragonkeeper.",
+          "popularity": 12.1163,
+          "poster_path": "/ggZGnJLzO3BTu7ysuuIzou3Oex5.jpg",
+          "release_date": "2024-04-11",
+          "title": "Dragonkeeper",
+          "video": false,
+          "vote_average": 7.7,
+          "vote_count": 180
+        }
+      ],
+      "total_pages": 1,
+      "total_results": 8
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

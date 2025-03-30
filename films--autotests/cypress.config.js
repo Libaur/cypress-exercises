@@ -13,7 +13,8 @@ module.exports = defineConfig({
     },
     baseUrl: "https://finally-films.netlify.app/",
     env: {
-      apiBaseUrl: "https://api.themoviedb.org"
+      apiBaseUrl: "https://api.themoviedb.org",
+      localhostBaseUrl: "http://localhost:8080"
     }
   },
 });
