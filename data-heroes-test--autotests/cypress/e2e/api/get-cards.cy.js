@@ -1,25 +1,23 @@
-describe("make sure it's the first page and the number of cards is correct", () => {
-	let getCards
-	const ok = 200
-	const expectedTotalCards = 826
-	const expectedTotalPages = 42
-	const expectedCardsOnPageQuantity = 20
+import { ENDPOINTS } from '../../support/endpoints'
 
-	before(() => {
-		cy.fixture('links').then(data => {
-			getCards = data.getCards
-		})
-	})
+describe("make sure it's the first page and the number of cards is correct", () => {
+	const OK = 200
+	const EXPECTED_TOTAL_CARDS = 826
+	const EXPECTED_TOTAL_PAGES = 42
+	const EXPECTED_CARDS_ON_PAGE_QUANTITY = 20
 
 	it('get cards', () => {
-		cy.request(getCards).then(response => {
+		cy.apiRequest({
+			method: 'GET',
+			url: ENDPOINTS.getCards
+		}).then(response => {
 			const info = response.body.info
-			expect(response.status).to.eq(ok)
-			expect(info.count).to.eq(expectedTotalCards)
-			expect(info.pages).to.eq(expectedTotalPages)
+			expect(response.status).to.eq(OK)
+			expect(info.count).to.eq(EXPECTED_TOTAL_CARDS)
+			expect(info.pages).to.eq(EXPECTED_TOTAL_PAGES)
 			expect(info.prev).to.eq(null)
 			expect(response.body.results).to.have.length(
-				expectedCardsOnPageQuantity,
+				EXPECTED_CARDS_ON_PAGE_QUANTITY,
 			)
 		})
 	})

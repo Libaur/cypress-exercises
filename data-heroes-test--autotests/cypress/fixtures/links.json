@@ -1,4 +1,0 @@
-{
-  "mainPage": "https://libaur.github.io/data-heroes-test/",
-  "getCards": "/api/character/?page=1"
-}

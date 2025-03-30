@@ -1,39 +1,23 @@
-describe('searching for a character (Rick) and validating that the search results contain the expected number of cards', () => {
-  const links = {
-    mainPage: '',
-  }
-  const inputData = {
-    rick: '',
-  }
-  const elementsData = {}
-  const minimalWaitForCardsToLoad = 500
-  const expectedCardsOnPageQuantity = 21
+import { SELECTORS } from "../support/selectors"
 
-  before(() => {
-    cy.fixture('links').then(data => {
-      links.mainPage = data.mainPage
-    })
-    cy.fixture('input-data').then(data => {
-      inputData.rick = data.rick
-    })
-    cy.fixture('elements-data').then(data => {
-      Object.assign(elementsData, data)
-    })
-  })
+describe('searching for a character (Rick) and validating that the search results contain the expected number of cards', () => {
+  const RICK = 'Rick'
+  const MINIMAL_WAIT_FOR_CARDS_TO_LOAD = 500
+  const EXPECTED_CARDS_ON_PAGE_QUANTITY = 21
 
   it('looking for Rick', () => {
-    cy.visit(links.mainPage)
-    cy.get(elementsData.input).last().click() // пара элементов, соответствующих селектору: last() для избежания { multiple: true }
-    cy.get(elementsData.inputOption).contains(elementsData.searchByName).click()
-    cy.get(elementsData.searchInput).type(inputData.rick)
-    cy.get(elementsData.button).contains(elementsData.applyButton).click()
+    cy.visit('/')
+    cy.get(SELECTORS.input).last().click() // пара элементов, соответствующих селектору: last() для избежания { multiple: true }
+    cy.get(SELECTORS.inputOption).contains(SELECTORS.searchByName).click()
+    cy.get(SELECTORS.searchInput).type(RICK)
+    cy.get(SELECTORS.button).contains(SELECTORS.applyButton).click()
 
-    cy.wait(minimalWaitForCardsToLoad)
+    cy.wait(MINIMAL_WAIT_FOR_CARDS_TO_LOAD)
 
-    cy.get(elementsData.card)
-      .should('have.length', expectedCardsOnPageQuantity)
+    cy.get(SELECTORS.card)
+      .should('have.length', EXPECTED_CARDS_ON_PAGE_QUANTITY)
       .each($card => {
-        expect($card).to.contain(inputData.rick)
+        expect($card).to.contain(RICK)
       })
   })
 })

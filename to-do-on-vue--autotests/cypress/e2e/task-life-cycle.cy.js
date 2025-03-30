@@ -1,59 +1,49 @@
+import { SELECTORS } from '../support/selectors.js'
+import { INPUT_DATA } from '../support/input-data.js'
 import { createTask } from '../support/helpers.js'
 
 describe('advance a task through the life cycle', () => {
-	const inputData = {}
-	const elementsData = {}
-
-	before(() => {
-		cy.fixture('input-data').then(data => {
-			Object.assign(inputData, data)
-		})
-		cy.fixture('elements-data').then(data => {
-			Object.assign(elementsData, data)
-		})
-	})
-
-	const checkTaskExist = () => cy.get(elementsData.taskItem).should('exist')
+	const checkTaskExist = () => cy.get(SELECTORS.taskItem).should('exist')
 	const checkTaskNotExist = () =>
-		cy.get(elementsData.taskItem).should('not.exist')
+		cy.get(SELECTORS.taskItem).should('not.exist')
 	const clickButton = buttonText => cy.contains(buttonText).click()
 
 	it('create, execute, return, archive and delete a task', () => {
 		cy.visit('/')
 
-		createTask(inputData.taskTitle, inputData.taskDescription, elementsData)
+		createTask(INPUT_DATA.taskTitle, INPUT_DATA.taskDescription, SELECTORS)
 
-		clickButton(elementsData.completed)
-		cy.get(elementsData.chapterTitle).should(
+		clickButton(SELECTORS.completed)
+		cy.get(SELECTORS.chapterTitle).should(
 			'contain.text',
-			elementsData.completed,
+			SELECTORS.completed,
 		)
-		clickButton(elementsData.inWork)
-		cy.get(elementsData.chapterTitle).should(
+		clickButton(SELECTORS.inWork)
+		cy.get(SELECTORS.chapterTitle).should(
 			'contain.text',
-			elementsData.inWork,
+			SELECTORS.inWork,
 		)
-		clickButton(elementsData.doneButton)
+		clickButton(SELECTORS.doneButton)
 		checkTaskNotExist()
-		clickButton(elementsData.completed)
+		clickButton(SELECTORS.completed)
 		checkTaskExist()
-		clickButton(elementsData.backToWorkButton)
+		clickButton(SELECTORS.backToWorkButton)
 		checkTaskNotExist()
-		clickButton(elementsData.inWork)
+		clickButton(SELECTORS.inWork)
 		checkTaskExist()
-		clickButton(elementsData.deleteButton)
+		clickButton(SELECTORS.deleteButton)
 		checkTaskNotExist()
-		clickButton(elementsData.toArchiveButton)
+		clickButton(SELECTORS.toArchiveButton)
 		checkTaskExist()
-		cy.get(elementsData.chapterTitle).should(
+		cy.get(SELECTORS.chapterTitle).should(
 			'contain.text',
-			elementsData.archive,
+			SELECTORS.archive,
 		)
-		clickButton(elementsData.deleteButton)
+		clickButton(SELECTORS.deleteButton)
 		checkTaskNotExist()
-		clickButton(elementsData.completed)
+		clickButton(SELECTORS.completed)
 		checkTaskNotExist()
-		clickButton(elementsData.inWork)
+		clickButton(SELECTORS.inWork)
 		checkTaskNotExist()
 	})
 })

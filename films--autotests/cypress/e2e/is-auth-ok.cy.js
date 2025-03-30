@@ -1,20 +1,14 @@
 import { ENDPOINTS } from '../support/endpoints'
 
 describe('is auth ok', () => {
-    const ok = 200
-    const expectedUserId = 21034190
-    const expectedUserName = 'corpseObscur'
+    const OK = 200
+    const EXPECTED_USER_ID = 21034190
+    const EXPECTED_USER_NAME = 'corpseObscur'
+    const token = Cypress.env('TOKEN')
     let mockAccountData
-    let token
 
     before(() => {
-        cy.fixture('input-data').then(data => {
-            token = data.token
-        })
-    })
-
-    before(() => {
-        cy.fixture('mock-acc-data').then(data => {
+        cy.fixture('acc-data').then(data => {
             mockAccountData = data
         })
 
@@ -32,9 +26,9 @@ describe('is auth ok', () => {
                 Authorization: `Bearer ${token}`
             }
         }).then(response => {
-            expect(response.status).to.eq(ok)
-            expect(response.body.id).to.eq(expectedUserId)
-            expect(response.body.username).to.eq(expectedUserName)
+            expect(response.status).to.eq(OK)
+            expect(response.body.id).to.eq(EXPECTED_USER_ID)
+            expect(response.body.username).to.eq(EXPECTED_USER_NAME)
         })
     })
 })

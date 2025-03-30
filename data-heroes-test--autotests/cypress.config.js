@@ -5,6 +5,9 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: "https://rickandmortyapi.com",
+    baseUrl: "https://libaur.github.io/data-heroes-test/", 
+    env: {
+      apiBaseUrl: "https://rickandmortyapi.com"
+    }
   },
 });
