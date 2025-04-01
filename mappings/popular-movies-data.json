@@ -1,0 +1,412 @@
+{
+    "request": {
+      "method": "GET",
+      "urlPath": "/3/movie/popular"
+    },
+    "response": {
+      "status": 200,
+      "jsonBody": {
+        "page": 1,
+        "results": [
+            {
+              "adult": false,
+              "backdrop_path": "/m2mzlsJjE3UAqeUB5fLUkpWg4Iq.jpg",
+              "genre_ids": [
+                53,
+                878
+              ],
+              "id": 1165067,
+              "original_language": "en",
+              "original_title": "Cosmic Chaos",
+              "overview": "Действие фантастического триллера разворачивается в виртуальной реальности. В одном из эпизодов игры фигурирует советский космический корабль, который подает сигнал SOS. Команда смелых астронавтов отправляется в захватывающее путешествие с целью помочь оставшимся в живых и узнать о произошедшем. Члены экипажа сталкиваются с неуязвимыми противниками в лице роботов, запрограммированных на убийство.",
+              "popularity": 575.5696,
+              "poster_path": "/fKbhK1blRpOkSZK8D5CuegUOH5L.jpg",
+              "release_date": "2023-08-03",
+              "title": "Космос. Смерть. Роботы",
+              "video": false,
+              "vote_average": 4.0,
+              "vote_count": 6
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/gsQJOfeW45KLiQeEIsom94QPQwb.jpg",
+              "genre_ids": [
+                28,
+                53
+              ],
+              "id": 1125899,
+              "original_language": "en",
+              "original_title": "Cleaner",
+              "overview": "Группа экоактивистов радикалов захватывает 300 заложников на роскошной вечеринке в небоскрёбе, чтобы вывести на чистую воду коррумпированную верхушку энергетической компании. Но в рядах банды находится настоящий безумец, в планах которого уничтожить заложников в качестве манифеста анархии. Только хрупкая девушка, оказавшаяся по ту сторону окон неприступного небоскреба — в прошлом спецназовец, а ныне простая мойщица окон — может спасти людей от гибели.",
+              "popularity": 532.5785,
+              "poster_path": "/gybr2uUoI6yLnfv1s0wcJJ9HGmp.jpg",
+              "release_date": "2025-02-19",
+              "title": "Клинер",
+              "video": false,
+              "vote_average": 6.372,
+              "vote_count": 82
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/8eifdha9GQeZAkexgtD45546XKx.jpg",
+              "genre_ids": [
+                28,
+                53,
+                878
+              ],
+              "id": 822119,
+              "original_language": "en",
+              "original_title": "Captain America: Brave New World",
+              "overview": "Новый президент США Таддеус Росс решает назначить Капитана Америку на официальную должность. Но в прошлом между ними были разногласия, и Сэм сомневается, что это хорошая идея. Этим же вечером на президента совершается покушение. Уилсон уверен, что предатель скрывается среди ближайшего окружения Росса.",
+              "popularity": 433.031,
+              "poster_path": "/akgHeoCvK4v0sOQzloXrN8ua8O3.jpg",
+              "release_date": "2025-02-12",
+              "title": "Капитан Америка: Новый Мир",
+              "video": false,
+              "vote_average": 6.1,
+              "vote_count": 1118
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/ibF5XVxTzf1ayzZrmiJqgeQ39Qk.jpg",
+              "genre_ids": [
+                28,
+                10752
+              ],
+              "id": 1373723,
+              "original_language": "en",
+              "original_title": "The Codes of War",
+              "overview": "",
+              "popularity": 410.9443,
+              "poster_path": "/oXeiQAfRK90pxxhP5iKPXQqAIN1.jpg",
+              "release_date": "2025-03-20",
+              "title": "The Codes of War",
+              "video": false,
+              "vote_average": 8.6,
+              "vote_count": 4
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/2siOHQYDG7gCQB6g69g2pTZiSia.jpg",
+              "genre_ids": [
+                10751,
+                14
+              ],
+              "id": 447273,
+              "original_language": "en",
+              "original_title": "Snow White",
+              "overview": "Прекрасная молодая принцесса, которая вынуждена скрываться от злой королевы-мачехи в лесной глуши в доме семи гномов.",
+              "popularity": 288.0587,
+              "poster_path": "/aOpByJVRjjKncEYIOQZD3CcpYdE.jpg",
+              "release_date": "2025-03-19",
+              "title": "Белоснежка",
+              "video": false,
+              "vote_average": 4.5,
+              "vote_count": 342
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/19pr5CzgsBYs67FAJvke8GQxN4g.jpg",
+              "genre_ids": [
+                27
+              ],
+              "id": 1301650,
+              "original_language": "mn",
+              "original_title": "Z Zone",
+              "overview": "",
+              "popularity": 243.0195,
+              "poster_path": "/s6kFtdxfTC4xR8yDGbIjTgGEcFI.jpg",
+              "release_date": "2025-02-07",
+              "title": "Z Zone",
+              "video": false,
+              "vote_average": 7.6,
+              "vote_count": 9
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/e807jDKiFcntZS32ze88X6I96OD.jpg",
+              "genre_ids": [
+                16,
+                28
+              ],
+              "id": 1297763,
+              "original_language": "ja",
+              "original_title": "ニンジャバットマン対ヤクザリーグ",
+              "overview": "Бэтмен и Робин совершают путешествие через время и пространство, отправляясь в Японию эпохи Эдо. Темный Рыцарь и его верный напарник вынуждены сражаться с альтернативной версией Лиги Справедливости: Джокер и его приспешники теперь средневековые феодалы и зовут себя Лигой якудза.",
+              "popularity": 241.9466,
+              "poster_path": "/eCVptSGScgU0xxISCXDGhM9WI3e.jpg",
+              "release_date": "2025-03-17",
+              "title": "Бэтмен-ниндзя против Лиги якудза",
+              "video": false,
+              "vote_average": 6.637,
+              "vote_count": 73
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg",
+              "genre_ids": [
+                16,
+                12,
+                10751,
+                35
+              ],
+              "id": 1241982,
+              "original_language": "en",
+              "original_title": "Moana 2",
+              "overview": "Получив вызов от предков-искателей, Моана и Мауи отправляются в далёкие и опасные воды Океании.",
+              "popularity": 215.4247,
+              "poster_path": "/wrg0C7sw1T1ogXvS8P4kiawY9xv.jpg",
+              "release_date": "2024-11-21",
+              "title": "Моана 2",
+              "video": false,
+              "vote_average": 7.1,
+              "vote_count": 2069
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/deUWVEgNh2IGjShyymZhaYP40ye.jpg",
+              "genre_ids": [
+                28,
+                12,
+                53
+              ],
+              "id": 1356039,
+              "original_language": "es",
+              "original_title": "Contraataque",
+              "overview": "Когда в ходе операции по освобождению заложников появляется новый враг, капитан Герреро и его элитные солдаты сталкиваются с засадой, устроенной преступной группировкой.",
+              "popularity": 191.7685,
+              "poster_path": "/dfON6E4XoXhry26nGpfqIorZinf.jpg",
+              "release_date": "2025-02-27",
+              "title": "Контратака",
+              "video": false,
+              "vote_average": 8.46,
+              "vote_count": 550
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/1w8kutrRucTd3wlYyu5QlUDMiG1.jpg",
+              "genre_ids": [
+                12,
+                10751,
+                16
+              ],
+              "id": 762509,
+              "original_language": "en",
+              "original_title": "Mufasa: The Lion King",
+              "overview": "Осиротевший Муфаса знакомится с наследником королевских кровей по имени Така. Вместе они отправляются в судьбоносное опасное путешествие, которое проверит их дружбу на прочность.",
+              "popularity": 215.758,
+              "poster_path": "/mSj47ckL15imHn9pX22jQG3adFt.jpg",
+              "release_date": "2024-12-18",
+              "title": "Муфаса: Король Лев",
+              "video": false,
+              "vote_average": 7.5,
+              "vote_count": 1741
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/xkjWiRQtrenqGRWO2Enry2JIl4d.jpg",
+              "genre_ids": [
+                27
+              ],
+              "id": 1388366,
+              "original_language": "en",
+              "original_title": "Popeye the Slayer Man",
+              "overview": "",
+              "popularity": 194.206,
+              "poster_path": "/nVwu3mN7hr1yF467pGct3yQFM41.jpg",
+              "release_date": "2025-03-21",
+              "title": "Popeye the Slayer Man",
+              "video": false,
+              "vote_average": 5.4,
+              "vote_count": 13
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/2n7lYEeIbucsEQCswRcVB6ZYmMP.jpg",
+              "genre_ids": [
+                878,
+                12,
+                28
+              ],
+              "id": 777443,
+              "original_language": "en",
+              "original_title": "The Electric State",
+              "overview": "Осиротевшая девушка отправляется на поиски младшего брата вместе с желтым игрушечным роботом и причудливым бродягой.",
+              "popularity": 166.7941,
+              "poster_path": "/yoxaghGvZ0L0zJi2UdgJfb8zqTr.jpg",
+              "release_date": "2025-03-07",
+              "title": "Электрический штат",
+              "video": false,
+              "vote_average": 6.581,
+              "vote_count": 795
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/AtciHGgpOU7ngsVhXbS2S5Spdlv.jpg",
+              "genre_ids": [
+                28,
+                35
+              ],
+              "id": 1077782,
+              "original_language": "en",
+              "original_title": "Old Guy",
+              "overview": "Отставной киллер Дэнни Долински по-прежнему считает себя непревзойденным мастером своего дела. И он чертовски доволен, когда его работодатели предлагают ему новою миссию. Но, как оказалось, Дэнни будет лишь помогать «оттачивать ремесло» юному убийце-вундеркинду Вильборгу — пареньку, который здорово стреляет, но помимо «объекта», «кладет» кучу случайных прохожих.  Новоявленной и плохо совместимой парочке требуется устранить лидера конкурирующего преступного синдиката. Но скоро становится понятно, что это задание — всего лишь ловушка: хитроумные конкуренты планируют ликвидировать их самих. Теперь, чтобы выжить, потребуются не только искусство старого киллера, но и молодой задор его напарника.",
+              "popularity": 157.2845,
+              "poster_path": "/8GHtDe4Lkcv9i3AcXCFBNQJcGH1.jpg",
+              "release_date": "2024-12-13",
+              "title": "Киллер в отставке",
+              "video": false,
+              "vote_average": 5.5,
+              "vote_count": 52
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/nYQJYdfoy7Tkx6bPzUpmCMmyJ4y.jpg",
+              "genre_ids": [
+                53,
+                28
+              ],
+              "id": 1151470,
+              "original_language": "en",
+              "original_title": "The Vigilante",
+              "overview": "Отслужившая в морской пехоте девушка вынуждена вступить в схватку с бандой торговцев людьми, которые похитили её 13-летнюю сестру.",
+              "popularity": 146.8265,
+              "poster_path": "/xD9LpYZYmNch2EhHWIJXXFayENH.jpg",
+              "release_date": "2023-09-08",
+              "title": "Война Эйми",
+              "video": false,
+              "vote_average": 5.9,
+              "vote_count": 20
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/9nhjGaFLKtddDPtPaX5EmKqsWdH.jpg",
+              "genre_ids": [
+                10749,
+                878,
+                53
+              ],
+              "id": 950396,
+              "original_language": "en",
+              "original_title": "The Gorge",
+              "overview": "Два агента высшей квалификации сближаются, когда их назначают охранять противоположные стороны загадочного ущелья. Зло, таящееся на дне ущелья, вырывается наружу, и они должны объединиться, чтобы выжить.",
+              "popularity": 144.2901,
+              "poster_path": "/yiUINsMKnemBFcUHqpv94yJolWH.jpg",
+              "release_date": "2025-02-13",
+              "title": "Ущелье",
+              "video": false,
+              "vote_average": 7.7,
+              "vote_count": 2156
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/mhKQ5ntqlXyck0TWh1pCpn42aAx.jpg",
+              "genre_ids": [
+                28,
+                80,
+                53
+              ],
+              "id": 1217379,
+              "original_language": "en",
+              "original_title": "Hellhound",
+              "overview": "Опытный наёмный убийца Лорено готовится выйти в отставку, но старый знакомый просит его выполнить последнюю, простую миссию. Лорено неохотно соглашается и летит в Бангкок, чтобы разобраться с местным преступным авторитетом. Ситуация выходит из-под контроля, когда он встречает старого коллегу Пола. Ошибка Лорено приводит к настоящему противостоянию на улицах тайского города.",
+              "popularity": 143.7936,
+              "poster_path": "/h1BtcTEk0pbe9XhbxrAp2oLKoWb.jpg",
+              "release_date": "2024-06-20",
+              "title": "Цепной пёс",
+              "video": false,
+              "vote_average": 6.479,
+              "vote_count": 24
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/zOpe0eHsq0A2NvNyBbtT6sj53qV.jpg",
+              "genre_ids": [
+                28,
+                878,
+                35,
+                10751,
+                12,
+                14
+              ],
+              "id": 939243,
+              "original_language": "en",
+              "original_title": "Sonic the Hedgehog 3",
+              "overview": "Соник, Наклз и Тейлз воссоединяются против нового могущественного противника, Ежа Шэдоу, таинственного злодея с силами, не похожими ни на что, с чем они сталкивались раньше. Команда Соника вынуждена создать неожиданный союз в надежде остановить Шэдоу и защитить планету.",
+              "popularity": 138.0273,
+              "poster_path": "/sj8AqCcpfdILdP5fhFVJLdx2NfF.jpg",
+              "release_date": "2024-12-19",
+              "title": "Соник 3 в Кино",
+              "video": false,
+              "vote_average": 7.8,
+              "vote_count": 2278
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/hD2SN5bbqxk0kcRmsATJkXObgnZ.jpg",
+              "genre_ids": [
+                28,
+                80,
+                14,
+                53
+              ],
+              "id": 1405338,
+              "original_language": "ja",
+              "original_title": "Demon City 鬼ゴロシ",
+              "overview": "Выполнив очередное задание, киллер Сюхэй Саката собирался завязать с этим ремеслом, когда неизвестные в масках демонов проникли к нему в дом и убили жену с пятилетней дочерью. Сам Саката получил пулю и остался парализованным. 12 лет спустя он в инвалидном кресле выходит на свободу и каким-то чудом обретает подвижность, чтобы убить всех тех, кто отнял у него семью.",
+              "popularity": 138.1131,
+              "poster_path": "/mVFHlfjlT9zFzHk9nMzorNZA1N7.jpg",
+              "release_date": "2025-02-26",
+              "title": "Город демонов",
+              "video": false,
+              "vote_average": 6.9,
+              "vote_count": 173
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/gFFqWsjLjRfipKzlzaYPD097FNC.jpg",
+              "genre_ids": [
+                28,
+                80,
+                53
+              ],
+              "id": 1126166,
+              "original_language": "en",
+              "original_title": "Flight Risk",
+              "overview": "Маршал авиации, перевозящая преступника на маленьком самолете, оказывается в ловушке, когда подозревает, что их пилот не тот, за кого себя выдает.",
+              "popularity": 154.713,
+              "poster_path": "/oifl3tfR9c4GhWwhJ8m0d6ummZH.jpg",
+              "release_date": "2025-01-22",
+              "title": "Особо опасный пассажир",
+              "video": false,
+              "vote_average": 6.143,
+              "vote_count": 536
+            },
+            {
+              "adult": false,
+              "backdrop_path": "/pwfXx2O3eFXi5dtWCV5XJPQJgqN.jpg",
+              "genre_ids": [
+                28,
+                53
+              ],
+              "id": 1143407,
+              "original_language": "hi",
+              "original_title": "स्काई फ़ोर्स",
+              "overview": "\"Скайфорс\" рассказывает захватывающую историю, вдохновленную реальными событиями, связанными с одним из самых смертоносных авиаударов между Индией и Пакистаном.",
+              "popularity": 124.5451,
+              "poster_path": "/f1KLUpaW7rbXhUm5SxG1lpPFFCJ.jpg",
+              "release_date": "2025-01-24",
+              "title": "Владыки небес",
+              "video": false,
+              "vote_average": 7.7,
+              "vote_count": 17
+            }
+          ],
+        "total_pages": 49421,
+        "total_results": 988406
+      },
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  }

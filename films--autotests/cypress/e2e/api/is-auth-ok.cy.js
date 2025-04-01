@@ -1,4 +1,4 @@
-import { ENDPOINTS } from '../support/endpoints'
+import { ENDPOINTS } from '../../support/endpoints'
 
 describe('is auth ok', () => {
     const OK = 200

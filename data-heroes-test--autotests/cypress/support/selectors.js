@@ -5,5 +5,5 @@ export const SELECTORS = {
     "inputOption": ".v-list-item-title",
     "searchInput": "#input-0",
     "button": ".v-btn",
-    "card": ".v-card"
+    "card": ".v-card--variant-tonal"
 }
